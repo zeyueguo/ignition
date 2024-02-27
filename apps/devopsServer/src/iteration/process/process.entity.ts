@@ -1,5 +1,5 @@
 import { updateVersionType } from '@devopsServer/iteration/iteration.entity';
-import { Entity, Column, PrimaryColumn, Generated } from 'typeorm';
+import { Column, Entity, Generated, PrimaryColumn } from 'typeorm';
 
 // 这里的每个流程都是一个节点，请勿窜用。
 export enum ProcessNodes {
@@ -102,6 +102,6 @@ export class Process {
   @Column({ default: null })
   currentEnvBranch?: string;
 
-  @Column({ default: updateVersionType.bugfix })
+  @Column({ default: updateVersionType?.bugfix | 3 })
   updateVersionType?: updateVersionType;
 }

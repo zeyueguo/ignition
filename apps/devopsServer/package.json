@@ -6,6 +6,6 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "cd .. && pnpm start:devops"
+    "dev": "cd .. && pnpm dev-server:devops"
   }
 }
